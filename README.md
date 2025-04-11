@@ -14,3 +14,5 @@
     git config --global user.name "Sarah Smith"
     git config --global user.email "sarah.smith@email.com"
     ```
+
+3. Test
