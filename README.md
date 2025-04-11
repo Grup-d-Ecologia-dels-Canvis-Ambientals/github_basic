@@ -80,3 +80,12 @@ C:\Users\agusti\Documents\codi> git clone <link copiat>
 ```
 
 Això ens crearà dins de "Documents" un directori amb el mateix nom que hem posat al repositori. 
+
+## Treball amb repositoris
+
+El cicle de treball amb un repositori es pot resumir com:
+
+1. Canviem un o varis fitxers dins el directori
+2. Quan ho decidim, afegim els fitxers canviats al commit actual (git add)
+3. Posem un missatge de commit i fem el commit (git commit)
+4. Pugem els canvis locals al repositori remot (git push)
