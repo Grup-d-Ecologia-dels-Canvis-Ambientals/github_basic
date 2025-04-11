@@ -89,3 +89,5 @@ El cicle de treball amb un repositori es pot resumir com:
 2. Quan ho decidim, afegim els fitxers canviats al commit actual (git add)
 3. Posem un missatge de commit i fem el commit (git commit)
 4. Pugem els canvis locals al repositori remot (git push)
+
+...
