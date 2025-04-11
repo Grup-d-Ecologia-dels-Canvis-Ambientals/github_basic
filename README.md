@@ -19,17 +19,16 @@
     no cal tornar a entrar credencials per fer push.
 
 ## Què és Git?
-
 ## Creació de repositoris
 ### Creació d'un repositori des d'un directori ja existent
 
     1. Creem un repositori des de github 
 
-        1.2. Anem al nostre perfil -> "Repositories"
-        1.3. Cliquem a "New"
-        1.4. Deixem totes les opcions per defecte (posem un nom al repositori)
+        1. Anem al nostre perfil -> "Repositories"
+        2. Cliquem a "New"
+        3. Deixem totes les opcions per defecte (posem un nom al repositori)
 
-    2. Anem al directori que volem pujar i executem les comandes següents (o similars):
+    2. Anem al directori que volem pujar i executem les comandes següents (o similars):        
 
         ```
         echo "# test_create_repo" >> README.md
@@ -37,8 +36,29 @@
         git add README.md
         git commit -m "first commit"
         git branch -M main
-        git remote add origin https://github.com/aescobarr/test_create_repo.git
+        git remote add origin https://github.com/aescobarr/test_create_repo.git        
         git push -u origin main
         ```
+        
+        Crea un fitxer README.md (markdown) i li afegeix una línia.
+
+        En aquest nivell és molt recomanable crear un fitxer .gitignore. Aquest fitxer li indica a git quins fitxers o directoris
+        ha d'excloure del control de canvis.
+        
+        Inicialitza el directori actual i li diu a git que aquest directori és un repositori. Aquest fitxer crea un directori que 
+        es diu ".git" que conté tota la informació de control de versions.
+        
+        Aquesta comanda afegeix un fitxer al commit en curs. Afegim tants fitxers com calgui.
+
+        Quan ja tenim els fitxers afegits, establim el missatge del commit. Aquest missatge descriu breument els canvis que hem fet
+        i ens permet identificar el motiu del commit.
+        
+        Aquesta comanda estableix el nom de la branca principal.
+
+        Aquesta comanda estableix l'adreça remota del repositori, on s'acabaran desant els canvis que fem en local.
+        
+        Aquesta comanda puja els tots els canvis locals al repositori remot. A més, el paràmetre -u li diu que la branca local
+        es desa al remot "origin" (https://github.com/aescobarr/test_create_repo.git).
+
 
 ### Creació d'un repositori des de zero
