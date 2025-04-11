@@ -90,4 +90,5 @@ El cicle de treball amb un repositori es pot resumir com:
 3. Posem un missatge de commit i fem el commit (git commit)
 4. Pugem els canvis locals al repositori remot (git push)
 
-...
+### Vista del repositori en un commit concret
+### Treball amb branques
