@@ -11,12 +11,12 @@
     + [3.2 - Creació d'un repositori des d'un directori ja existent](#32---creació-dun-repositori-des-dun-directori-ja-existent)
         - [Creem un repositori des de github ](#creem-un-repositori-des-de-github)
         - [Anem al directori que volem pujar (al nostre disc) i executem les comandes següents (o similars):        ](#anem-al-directori-que-volem-pujar-al-nostre-disc-i-executem-les-comandes-següents-o-similars)
-* [4 - Treball amb repositoris](#4---treball-amb-repositoris)
-    + [4.1 - Arreglant possibles patinades](#41---arreglant-possibles-patinades)
-        - [4.1.1 - Afegim un fitxer a staging per accident](#411---afegim-un-fitxer-a-staging-per-accident)
-        - [4.1.2 - Fem un commit per accident](#412---fem-un-commit-per-accident)
-    + [4.2 - Mostrar versions anteriors d'un fitxer](#42---mostrar-versions-anteriors-dun-fitxer)
-    + [4.3 - Mostrar versions anteriors de tot un repositori](#43---mostrar-versions-anteriors-de-tot-un-repositori)
+* [4 - Treball amb repositoris](#4---treball-amb-repositoris)    
+    + [4.1 - Mostrar versions anteriors d'un fitxer](#41---mostrar-versions-anteriors-dun-fitxer)
+    + [4.2 - Mostrar versions anteriors de tot un repositori](#42---mostrar-versions-anteriors-de-tot-un-repositori)
+    + [4.3 - Arreglant possibles patinades](#43---arreglant-possibles-accidents)
+        - [4.3.1 - Afegim un fitxer a staging per accident](#431---afegim-un-fitxer-a-staging-per-accident)
+        - [4.3.2 - Fem un commit per accident](#432---fem-un-commit-per-accident)
 * [5 - Treball amb branques](#5---treball-amb-branques)
     + [5.1 - Com crear una nova branca](#51---com-crear-una-nova-branca)
     + [5.2 - Fusionar una nova branca amb la principal](#52---fusionar-una-nova-branca-amb-la-principal)
@@ -181,40 +181,7 @@ El cicle de treball amb un repositori es pot resumir com:
     git push origin main
     ```    
 
-### 4.1 - Arreglant possibles patinades
-
-#### 4.1.1 - Afegim un fitxer a staging per accident
-
-Podem desfer això de la següent manera
-```
-git reset HEAD -- path/al/fitxer
-# o bé
-git restore --staged path/al/fitxer
-```
-
-#### 4.1.2 - Fem un commit per accident
-
-Podem rectificar el commit més recent. El procediment és
-```
-# Afegim per accident un fitxer secret al commit
-git add secret.txt
-git commit -m "afegit fitxer secret"
-git push origin main
-
-# El fitxer secret puja al repositori, el volem eliminar
-git rm secret.txt --cached
-
-# Modifiquem .gitignore per ignorar el fitxer.txt
-git add .gitignore
-
-# Amenem el commit i modifiquem el missatge de commit també
-git commit --amend -m "modificat gitignore"
-
-# Hem de forçar el push per què git sobreescriu un commit ja existent
-git push --force
-```
-
-### 4.2 - Mostrar versions anteriors d'un fitxer
+### 4.1 - Mostrar versions anteriors d'un fitxer
 
 Una de les coses útils que es pot fer amb git és recuperar qualsevol versió anterior del repositori o d'un fitxer concret.
 
@@ -242,7 +209,7 @@ Una de les coses útils que es pot fer amb git és recuperar qualsevol versió a
     git checkout HEAD <nom fitxer>
     ```    
 
-### 4.3 - Mostrar versions anteriors de tot un repositori
+### 4.2 - Mostrar versions anteriors de tot un repositori
 
 1. Executem la comanda
     ```
@@ -261,6 +228,39 @@ Una de les coses útils que es pot fer amb git és recuperar qualsevol versió a
     ```
     git checkout <nom_branca>
     ```
+
+### 4.3 - Arreglant possibles accidents
+
+#### 4.3.1 - Afegim un fitxer a staging per accident
+
+Podem desfer això de la següent manera
+```
+git reset HEAD -- path/al/fitxer
+# o bé
+git restore --staged path/al/fitxer
+```
+
+#### 4.3.2 - Fem un commit per accident
+
+Podem rectificar el commit més recent. El procediment és
+```
+# Afegim per accident un fitxer secret al commit
+git add secret.txt
+git commit -m "afegit fitxer secret"
+git push origin main
+
+# El fitxer secret puja al repositori, el volem eliminar
+git rm secret.txt --cached
+
+# Modifiquem .gitignore per ignorar el fitxer.txt
+git add .gitignore
+
+# Amenem el commit i modifiquem el missatge de commit també
+git commit --amend -m "modificat gitignore"
+
+# Hem de forçar el push per què git sobreescriu un commit ja existent
+git push --force
+```
 
 ## 5 - Treball amb branques
 
