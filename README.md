@@ -210,7 +210,7 @@ git push origin main
 # El fitxer secret puja al repositori, el volem eliminar
 git rm secret.txt --cached
 
-# Modifiquem .gitignore per ignorar el fitxer.txt
+# Modifiquem .gitignore per excloure el fitxer i assegurar que no el tornem a pujar per accident
 git add .gitignore
 
 # Amenem el commit i modifiquem el missatge de commit també
@@ -218,6 +218,8 @@ git commit --amend -m "modificat gitignore"
 
 # Hem de forçar el push per què git sobreescriu un commit ja existent
 git push --force
+# git push --force-with-lease és una opció encara més segura, que garanteix que no sobreescriurem
+# la feina de ningú
 ```
 
 ### 4.2 - Mostrar versions anteriors d'un fitxer
@@ -231,6 +233,17 @@ Una de les coses útils que es pot fer amb git és recuperar qualsevol versió a
     ```
     git log
     ```
+    > [!TIP]
+    > Algunes variants útils de git log
+
+    | Comanda | què mostra? |
+    | ------- | ----------- |
+    | git log --since=2024-04-01 | Log de commits des de 1 de Març de 2023 |
+    | git log --author=aescobarr | Log de commits filtrats per autor 'aescobarr' |
+    | git log --graph | Log en forma gràfica (mostra branques) |
+    | git log --pretty=oneline | Log més compacte en una sola línia |
+    | git log --grep='bug' | Cerca la paraula 'bug' als missatges de commit |
+
 2. Aquesta comanda mostra una llista dels commits de més recent a més antic; cada commit té associat un número de commit
     ```
     commit c10eb21b5a60c700d5c408defedaad829c65f311
@@ -252,7 +265,7 @@ Una de les coses útils que es pot fer amb git és recuperar qualsevol versió a
 
 1. Executem la comanda
     ```
-    git checkout <numero commit>
+    git checkout <codi commit>
     ```
 2. El repositori queda en estat "detached HEAD"
 
