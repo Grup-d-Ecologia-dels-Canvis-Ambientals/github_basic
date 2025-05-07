@@ -1,7 +1,7 @@
 # Conceptes bàsics GitHub
 
-* [1 - Instalació Git Windows](#1---instalació-git-windows)
-* [2 - Què és Git?](#2---què-és-git)
+* [1 - Què és Git?](#1---què-és-git)
+* [2 - Instalació Git Windows](#2---instalació-git-windows)
 * [3 - Creació de repositoris](#3---creació-de-repositoris)
     + [3.1 - Creació d'un repositori des de zero](#31---creació-dun-repositori-des-de-zero)
         - [Creem un repositori des de github ](#creem-un-repositori-des-de-github)
@@ -22,7 +22,11 @@
     + [5.2 - Fusionar una nova branca amb la principal](#52---fusionar-una-nova-branca-amb-la-principal)
 * [6 - Referències](#6---referències)
 
-## 1 - Instalació Git Windows
+## 1 - Què és Git?
+
+[Git](https://git-scm.com/) és una eina que permet fer un control de versions de codi. [Github](https://github.com/) és un repositori central, que permet compartir el codi i col·laborar amb altres persones.
+
+## 2 - Instalació Git Windows
 
 > [!IMPORTANT]
 > Requisits - Disposar d'un usuari de GitHub, i tenir les credencials a mà. 
@@ -52,10 +56,6 @@
     ```
     git config --global core.autocrlf true
     ```
-
-## 2 - Què és Git?
-
-[Git](https://git-scm.com/) és una eina que permet fer un control de versions de codi. [Github](https://github.com/) és un repositori central, que permet compartir el codi i col·laborar amb altres persones.
 
 ## 3 - Creació de repositoris
 
